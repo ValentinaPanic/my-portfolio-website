@@ -1,5 +1,7 @@
 import Head from "next/head";
-
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import Image from "next/image";
+import workingWoman from "../public/Images/working-woman.png"
 export default function Home() {
   return (
     <>
@@ -10,16 +12,55 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-white">
-        <section className="min-h-screen">
-          <nav className="bg-red-300 py-10 mb-10 flex justify-between">
-            <h1 className="text-xl ml-3">Valentina Panic</h1>
+        <section className="justify-center">
+          <nav className="bg-gradient-to-l  from-red-300 to-red-500 py-10 mb-10 flex justify-between">
+            <h1 className="text-xl ml-3 text-zinc-700 font-sans">
+              Valentina Panic
+            </h1>
             <ul className="flex justify-around">
-              <li>Resume</li>
-              <li>About</li>
-              <li>Projects</li>
+              <li className="px-4 py-2">Resume</li>
+              <li className="px-4 py-2">About</li>
+              <li className="px-4 py-2">Projects</li>
             </ul>
           </nav>
+          </section>
+          
+          <div className="flex min-h-screen">
+            <section>
+          <div className="shadow-lg text-center p-10 m-10">
+            <h1 className="text-5xl py-2 text-teal-600">Valentina Panic</h1>
+            <h2 className="text-2xl py-2">Software Engineer</h2>
+            <p className="text-md py5 leading-8">Me introducing here in one sentence</p>
+            <div>
+              Contact me section
+              <div className="text-5l flex justify-center gap-2 py-2 text-gray-600">
+                <AiFillLinkedin />
+                <AiFillGithub />
+              </div>
+            </div>
+            <div className="relative mx-auto bg-radient-to-b  from-red-500 rounded-full w-80 h-80">
+              <Image src={workingWoman} alt={''}/>
+            </div>
+          </div>
         </section>
+        <section className="text-center">
+          <div className="text-center shadow-lg p-10 m-10">
+          <h3>My Skills</h3>
+          <p>small paragraphr on my background</p>
+          <div>
+            What tools I have used:
+            <ul>
+              <li>Ruby on Rails</li>
+              <li>React</li>
+              <li>Javascript</li>
+              <li>REST API</li>
+              <li>Typescript</li>
+              <li>HTML</li>
+            </ul>
+          </div>
+          </div>
+        </section>
+        </div>
       </main>
     </>
   );
