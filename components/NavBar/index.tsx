@@ -9,7 +9,7 @@ const Navbar: NextPage<{
   setDarkMode: (value: boolean) => void;
 }> = ({ darkMode, setDarkMode }) => (
   <header>
-    <nav className="  text-zinc-700 font-mono dark:text-white bg-gradient-to-r  from-amber-700 to-amber-400 py-5 mb-10 flex items-center justify-between dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-600">
+    <nav className="  text-zinc-700 font-mono dark:text-white bg-gradient-to-r  from-amber-700 to-amber-400 py-3 mb-5 flex items-center justify-between dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-600">
       <Logo />
       <div className="flex justify-around">
         <div
