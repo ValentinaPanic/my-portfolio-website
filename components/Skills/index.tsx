@@ -84,11 +84,11 @@ const skills = [
   },
 ];
 
-const Skill = ({ name = "", x = "0", y = "0" }) => {
+const Skill = ({ name = "", x="", y="" }) => {
   return (
     <motion.div
       className="flex items-center justify-center rounded-full font-semibold px-6 py-3 bg-amber-500 dark:bg-amber-500 absolute  text-zinc-700"
-      initial={{ x: 0, y: 0 }}
+      initial={{ x: "0", y: "0" }}
       whileInView={{ x: x, y: y }}
       transition={{ duration: 2 }}
     >
@@ -100,7 +100,7 @@ const Skill = ({ name = "", x = "0", y = "0" }) => {
 const Skills = () => {
   return (
     <div className="grow">
-      <div className="w-full h-screen flex items-center justify-center bg-circuralLight dark:bg-circuralDark shadow-xl rounded-[8px]">
+      <div className="w-full h-screen flex items-center justify-center bg-circuralLight dark:bg-circuralDark shadow-xl rounded-[8px] max-h-screen mb-5 mr-å5">
         {skills.map((skill, index) => (
           <Skill key={index} name={skill.name} x={skill.x} y={skill.y} />
         ))}

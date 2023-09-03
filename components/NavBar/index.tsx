@@ -21,8 +21,8 @@ const Navbar: NextPage<{
         <Link className="mx-4 py-2" href={"/"}>
           Home
         </Link>
-        <Link className="mx-4 py-2" href={"/resume"}>
-          Resume
+        <Link className="mx-4 py-2" href={"/contact-me"}>
+          Contact
         </Link>
         <Link className="mx-4 py-2" href={"/about"}>
           About

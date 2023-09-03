@@ -1,7 +1,10 @@
 import { NextPage } from "next";
 import React from "react";
 import profilePicture from "../../public/Images/valentina-profile-1.jpg";
+import flatironCertificate from "../../public/Images/flatiron-certificate.png";
 import Image from "next/image";
+import Experience from "../../components/Experience";
+
 const About: NextPage = () => {
   const colSpan =
     "col-span-4 flex flex-col items-start justify-start shadow-lg p-8 h-full text-zinc-700 text-[15px]  dark:text-white border-r-[1px] border-amber-600 dark:border-slate-600 rounded-xl dark:bg-slate-800";
@@ -13,33 +16,40 @@ const About: NextPage = () => {
         That&apos;s what defines your career.&apos; — Carlton Fisk
       </div>
 
-      <div className="grid w-full grid-cols-8 gap-5 items-center justify-center">
-         <div className={`col-span-8 flex flex-row items-start justify-start border-[1px] border-amber-600 dark:border-slate-600 rounded-xl p-8 dark:text-white shadow-inner`}> 
+      <div className="grid w-full grid-cols-8 gap-5 items-center justify-center mb-10">
+        <div
+          className={`col-span-8 flex flex-row items-start justify-start border-[1px] border-amber-600 dark:border-slate-600 rounded-xl p-8 dark:text-white shadow-inner dark:bg-slate-800`}
+        >
           <Image
-            className={`w-60 h-75 relative rounded-2xl border-2 border-solid border-amber-500 p-4 mb-4 self-center shadow-xl m-r-4`}
+            className={`w-60 h-75 relative rounded-2xl border-2 border-solid border-amber-500 p-4 self-center shadow-xl m-r-4`}
             src={profilePicture}
-            alt={"Valentina Panic"}
+            alt={"ValentinaPanic"}
           />
-          <div className="col-span-6 px-8 ">
-          <p className={`${pTagStyle}`}>
-            I am a dedicated front-end engineer with a deep passion for crafting
-            user-friendly and visually pleasing interfaces. My expertise lies in
-            JavaScript and various JavaScript frameworks, and I&apos;m a strong
-            proponent of TypeScript. While I have beginner-level knowledge in
-            Kotlin, I&apos;ve collaborated with senior engineers on projects
-            involving this language.
-          </p>
-          <p className={`${pTagStyle}`}>
-            Additionally, in my current role, I&apos;ve successfully completed
-            the migration of a project from CodeBuild to GitHub Actions and
-            Gradle, guided and mentored by senior engineers.
-          </p>
-          <p>
-            I take great pleasure in conducting demos for the various features
-            I&apos;ve contributed to, and I&apos;ve had the privilege of serving
-            as the engineering lead on multiple projects.
-          </p>
+          <div className="col-span-4 px-8 py-4">
+            <p className={`${pTagStyle}`}>
+              I am a dedicated front-end engineer with a deep passion for
+              crafting user-friendly and visually pleasing interfaces. My
+              expertise lies in JavaScript and various JavaScript frameworks,
+              and I&apos;m a strong proponent of TypeScript. While I have
+              beginner-level knowledge in Kotlin, I&apos;ve collaborated with
+              senior engineers on projects involving this language.
+            </p>
+            <p className={`${pTagStyle}`}>
+              Additionally, in my current role, I&apos;ve successfully completed
+              the migration of a project from CodeBuild to GitHub Actions and
+              Gradle, guided and mentored by senior engineers.
+            </p>
+            <p>
+              I take great pleasure in conducting demos for the various features
+              I&apos;ve contributed to, and I&apos;ve had the privilege of
+              serving as the engineering lead on multiple projects.
+            </p>
           </div>
+          <Image
+            className={`w-full h-full relative border-2 border-solid border-amber-500  self-center shadow-xl m-r-4`}
+            src={flatironCertificate}
+            alt={"ValentinaPanic"}
+          />
         </div>
         <div className={`${colSpan}`}>
           <h3 className="text-amber-600 pb-2 text-lg font-semibold">
@@ -110,6 +120,7 @@ const About: NextPage = () => {
           </p>
         </div>
       </div>
+      <Experience />
     </main>
   );
 };
