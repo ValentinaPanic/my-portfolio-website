@@ -15,8 +15,8 @@ module.exports = {
         light: "#E4E3EC",
       },
       backgroundImage: {
-        circuralLight: 'repeating-radial-gradient(rgba(180,83,9,0.3) 2px,#E4E3EC 3px, #E4E3EC 90px);',
-        circuralDark: 'repeating-radial-gradient(rgba(180,83,9,0.3) 2px,#6B7280 3px, #6B7280 110px);'
+        circuralLight: 'repeating-radial-gradient(rgb(56 189 248)  2px,#E4E3EC 4px, #E4E3EC 90px);',
+        circuralDark: 'repeating-radial-gradient(rgb(56 189 248) 2px,rgba(51,65,85) 4px, rgba(51,65,85) 110px);'
       }
     },
   },
