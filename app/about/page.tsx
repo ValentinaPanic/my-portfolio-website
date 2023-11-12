@@ -2,7 +2,6 @@
 import { NextPage } from "next";
 import React from "react";
 import profilePicture from "../../public/Images/portrait-image.jpg";
-import flatironCertificate from "../../public/Images/flatiron-certificate.png";
 import Image from "next/image";
 import Experience from "../../components/Experience";
 
@@ -48,13 +47,6 @@ const About: NextPage = () => {
               serving as the engineering lead on multiple projects.
             </p>
           </div>
-          <Image
-            className={`h-full w-full rounded-2xl relative border-2 border-solid border-amber-500  self-center shadow-xl m-r-4`}
-            src={flatironCertificate}
-            alt={"ValentinaPanic"}
-            // width={650}
-            // height={400}
-          />
         </div>
         <div className={`${colSpan}`}>
           <h3 className="text-amber-600 pb-2 text-lg font-semibold">
