@@ -1,7 +1,7 @@
 "use client"
 import { NextPage } from "next";
 import React from "react";
-import profilePicture from "../../public/images/portrait-image.jpg";
+import profilePicture from "../../public/images/valentina-profile-1.jpg";
 import Image from "next/image";
 import Experience from "../../components/Experience";
 
