@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
-
+//@ts-ignore
 const CircleIcon = ({ reference }) => {
   const { scrollYProgress } = useScroll({
     target: reference,

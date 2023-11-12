@@ -66,7 +66,7 @@ const Experience = () => {
           <List
             position="Beverage Director/ General Manager"
             company="El Chingon Mexican Bistro"
-            companyLink=""
+            companyLink={undefined}
             time={"12/2013 - 01/2020"}
             roleDescription=" I managed a team of 20, day-to-day operations in the establishment with 100 seats. I crafted a bar program, including all hiring, scheduling, ordering, and payroll."
           />

@@ -9,11 +9,11 @@ import { sendEmail } from "../../actions/sendEmail";
 
 const Resume: NextPage = () => {
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    console.log(data.get("message"));
-  }
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   const data = new FormData(e.currentTarget);
+  //   console.log(data.get("message"));
+  // }
   return (
     <div className="flex gap-5 mt-10 h-full">
       <div className="p-4 text-center text-xl">
