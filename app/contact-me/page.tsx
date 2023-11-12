@@ -30,7 +30,7 @@ const Resume: NextPage = () => {
       <div className="grow">
         <form className="flex flex-col dark:text-black">
         <input
-            className="h-14 mb-3 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+            className="h-14 mb-3 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none border-[1px] border-amber-600 dark:border-slate-600 shadow-md"
             name="senderName"
             type="text"
             required
@@ -38,7 +38,7 @@ const Resume: NextPage = () => {
             placeholder="Your Name"
           />
           <input
-            className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+            className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none border-[1px] border-amber-600 dark:border-slate-600 shadow-md"
             name="senderEmail"
             type="email"
             required
@@ -46,13 +46,13 @@ const Resume: NextPage = () => {
             placeholder="Your email"
           />
           <textarea
-            className="h-[400px] my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+            className="h-[400px] my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none border-[1px] border-amber-600 dark:border-slate-600 shadow-md"
             name="message"
             placeholder="Your message"
             required
             maxLength={5000}
           />
-          <button type="submit" className="bg-amber-600 p-3 w-[190px] rounded-full self-center flex items-center justify-center group hover:scale-110 hover:bg-amber-500" > Send Message <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 ml-2" />{" "} </button>
+          <button type="submit" className="bg-amber-600 p-3 w-[220px] rounded-full self-start flex items-center justify-center group hover:scale-110 hover:bg-amber-500 mt-5"> Send Message <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 ml-2" />{" "} </button>
         </form>
       </div>
     </div>
