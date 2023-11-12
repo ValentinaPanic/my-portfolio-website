@@ -4,6 +4,7 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -17,6 +18,9 @@ module.exports = {
       backgroundImage: {
         circuralLight: 'repeating-radial-gradient(rgb(56 189 248)  2px,#E4E3EC 4px, #E4E3EC 90px);',
         circuralDark: 'repeating-radial-gradient(rgb(56 189 248) 2px,rgba(51,65,85) 4px, rgba(51,65,85) 110px);'
+      },
+      boxShadow: {
+        mainPageShadow: "0px 10px 70px 5px rgba(180,83,9,0.3)"
       }
     },
   },
