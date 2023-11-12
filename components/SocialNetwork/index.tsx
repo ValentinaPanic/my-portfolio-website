@@ -3,7 +3,7 @@ import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 
 const SocialNetwork = () => {
   return (
-    <div className="w-full h-full text-5xl flex justify-center gap-2 py-2 text-zinc-700 dark:text-white">
+    <div className="w-full text-5xl flex justify-center gap-2 py-2 text-zinc-700 dark:text-white">
     <a
       href="https://www.linkedin.com/in/valentina-panic-405254162/"
       className="cursor-pointer"

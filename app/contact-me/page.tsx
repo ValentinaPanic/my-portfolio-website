@@ -5,6 +5,7 @@ import { NextPage } from "next";
 import React from "react";
 import { FaLongArrowAltRight, FaPaperPlane } from "react-icons/fa";
 import SocialNetwork from "../../components/SocialNetwork";
+import { sendEmail } from "../../actions/sendEmail";
 
 const Resume: NextPage = () => {
 
@@ -27,7 +28,7 @@ const Resume: NextPage = () => {
         <SocialNetwork/>
       </div>
       <div className="grow">
-        <form className="flex flex-col dark:text-black" onSubmit={handleSubmit}>
+        <form className="flex flex-col dark:text-black">
         <input
             className="h-14 mb-3 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
             name="senderName"

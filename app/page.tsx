@@ -6,7 +6,7 @@ import Skills from "../components/Skills";
 
 export default function Home() {
   return (
-    <div className="h-[calc(100vh_-_154px)] w-full flex gap-5 px-4">
+    <div className="min-h-[calc(100vh_-_154px)] w-full flex gap-5 px-4 ">
       <div className="w-[500px] shadow-mainPageShadow text-center dark:bg-slate-700 rounded-lg dark:shadow-none font-extralight justify-between items-center py-4">
         <div className="block items-center justify-center">
           <h1 className="text-5xl py-2 text-amber-500 font-semibold">

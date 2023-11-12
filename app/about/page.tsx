@@ -1,13 +1,14 @@
+"use client"
 import { NextPage } from "next";
 import React from "react";
-import profilePicture from "../../public/Images/valentina-profile-1.jpg";
+import profilePicture from "../../public/Images/portrait-image.jpg";
 import flatironCertificate from "../../public/Images/flatiron-certificate.png";
 import Image from "next/image";
 import Experience from "../../components/Experience";
 
 const About: NextPage = () => {
   const colSpan =
-    "col-span-4 flex flex-col items-start justify-start shadow-lg p-8 h-full text-zinc-700 text-[15px]  dark:text-white border-r-[1px] border-amber-600 dark:border-slate-600 rounded-xl dark:bg-slate-800";
+    "col-span-4 flex flex-col items-start justify-start shadow-lg p-8 h-full text-zinc-700 text-[15px] dark:text-white border-r-[1px] border-amber-600 dark:border-slate-600 rounded-xl dark:bg-slate-800";
   const pTagStyle = "mb-2";
   return (
     <main className="w-full flex flex-col justify-center items-center">
@@ -18,14 +19,16 @@ const About: NextPage = () => {
 
       <div className="grid w-full grid-cols-8 gap-5 items-center justify-center mb-10">
         <div
-          className={`col-span-8 flex flex-row items-start justify-start border-[1px] border-amber-600 dark:border-slate-600 rounded-xl p-8 dark:text-white shadow-inner dark:bg-slate-800`}
+          className={`col-span-8 flex flex-row gap-4 items-normal border-[1px] border-amber-600 dark:border-slate-600 rounded-xl p-8 dark:text-white shadow-inner dark:bg-slate-800`}
         >
           <Image
-            className={`w-60 h-75 relative rounded-2xl border-2 border-solid border-amber-500 p-4 self-center shadow-xl m-r-4`}
+            className={`relative rounded-2xl border-2 border-solid border-amber-500 p-4 self-center shadow-xl m-r-4`}
             src={profilePicture}
             alt={"ValentinaPanic"}
+            width={300}
+            height={350}
           />
-          <div className="col-span-4 px-8 py-4">
+          <div className={`col-span-2 shadow-lg py-8 px-20 text-left text-zinc-700 text-lg dark:text-white border-r-[1px] border-amber-600 dark:border-slate-600 rounded-xl dark:bg-slate-800`}>
             <p className={`${pTagStyle}`}>
               I am a dedicated front-end engineer with a deep passion for
               crafting user-friendly and visually pleasing interfaces. My
@@ -46,9 +49,11 @@ const About: NextPage = () => {
             </p>
           </div>
           <Image
-            className={`w-full h-full relative border-2 border-solid border-amber-500  self-center shadow-xl m-r-4`}
+            className={`h-full w-full rounded-2xl relative border-2 border-solid border-amber-500  self-center shadow-xl m-r-4`}
             src={flatironCertificate}
             alt={"ValentinaPanic"}
+            // width={650}
+            // height={400}
           />
         </div>
         <div className={`${colSpan}`}>

@@ -1,3 +1,4 @@
+"use client"
 import { NextPage } from "next";
 import React, { useState } from "react";
 import { BsFillMoonStarsFill } from "react-icons/bs";
@@ -6,15 +7,15 @@ import Logo from "../Logo";
 
 const Navbar: NextPage<{
   darkMode: boolean;
-  setDarkMode: (value: boolean) => void;
+  setDarkMode?: (value: boolean) => void;
 }> = ({ darkMode, setDarkMode }) => (
   <header>
-    <nav className="  text-zinc-700 font-mono dark:text-white bg-gradient-to-r  from-amber-700 to-amber-400 py-3 mb-5 flex items-center justify-between dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-600">
+    <nav className="w-full text-zinc-700 font-mono dark:text-white bg-gradient-to-r from-amber-700 to-amber-400 py-3 flex items-center justify-between dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-600 mb-4">
       <Logo />
       <div className="flex justify-around">
         <div
           className="px-4 py-2 cursor-pointer text-2xl"
-          onClick={() => setDarkMode(!darkMode)}
+          onClick={() => console.log('NEED WORK')}
         >
           <BsFillMoonStarsFill />
         </div>
