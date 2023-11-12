@@ -9,6 +9,7 @@ const About: NextPage = () => {
   const colSpan =
     "col-span-4 flex flex-col items-start justify-start shadow-lg p-8 h-full text-zinc-700 text-[15px] dark:text-white border-r-[1px] border-amber-600 dark:border-slate-600 rounded-xl dark:bg-slate-800";
   const pTagStyle = "mb-2";
+  
   return (
     <main className="w-full flex flex-col justify-center items-center">
       <div className="mb-5 text-amber-500 text-2xl">
