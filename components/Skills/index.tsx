@@ -9,7 +9,7 @@ const skills = [
   },
   {
     name: "Ruby on Rails",
-    x: "-20vw",
+    x: "-15vw",
     y: "19vw",
   },
   {
@@ -45,7 +45,7 @@ const skills = [
   {
     name: "Styled Components",
     x: "-10vw",
-    y: "12vw",
+    y: "7vw",
   },
   {
     name: "Semantic React UI",
@@ -59,8 +59,8 @@ const skills = [
   },
   {
     name: "Contentful",
-    x: "18vw",
-    y: "18vw",
+    x: "5vw",
+    y: "15vw",
   },
   {
     name: "HTML",
@@ -87,7 +87,7 @@ const skills = [
 const Skill = ({ name = "", x="", y="" }) => {
   return (
     <motion.div
-      className="flex items-center justify-center rounded-full font-semibold px-6 py-3 bg-amber-500 dark:bg-amber-500 absolute  text-zinc-700"
+      className="flex items-center justify-center rounded-full font-semibold px-6 py-3 bg-amber-500 dark:bg-amber-500 absolute text-zinc-700"
       initial={{ x: "0", y: "0" }}
       whileInView={{ x: x, y: y }}
       transition={{ duration: 2 }}
@@ -100,7 +100,7 @@ const Skill = ({ name = "", x="", y="" }) => {
 const Skills = () => {
   return (
     <div className="grow">
-      <div className="w-full h-screen flex items-center justify-center bg-circuralLight dark:bg-circuralDark shadow-xl rounded-[8px] max-h-screen mb-5 mr-å5">
+      <div className="h-full flex items-center justify-center bg-circuralLight dark:bg-circuralDark shadow-xl rounded-lg">
         {skills.map((skill, index) => (
           <Skill key={index} name={skill.name} x={skill.x} y={skill.y} />
         ))}
