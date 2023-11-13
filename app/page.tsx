@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="lg:block lg:h-full xs:w-full min-h-[calc(100vh_-_154px)] w-full flex gap-5 px-4">
       <div className="lg:w-full xl:w-[500px] shadow-mainPageShadow text-center dark:bg-slate-700 rounded-lg dark:shadow-none font-extralight justify-between items-center py-4 lg:flex lg:items-center lg:p-4">
-        <div className="block items-center justify-center">
+        <div className="block items-center justify-center grow">
           <h1 className="md:text-2xl text-5xl py-2 text-amber-500 font-semibold">
             Valentina Panic
           </h1>
