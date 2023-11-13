@@ -1,8 +1,8 @@
 "use client"
 import { NextPage } from "next";
 import React from "react";
-// import profilePicture from "../../public/images/portrait-image.jpg";
-// import Image from "next/image";
+import profilePicture from "../../public/images/portrait-image.JPG";
+import Image from "next/image";
 import Experience from "../../components/Experience";
 
 const About: NextPage = () => {
@@ -21,13 +21,13 @@ const About: NextPage = () => {
         <div
           className={`col-span-8 flex flex-row gap-4 items-normal border-[1px] border-amber-600 dark:border-slate-600 rounded-xl p-8 dark:text-white shadow-inner dark:bg-slate-800`}
         >
-          {/* <Image
+          <Image
             className={`relative rounded-2xl border-2 border-solid border-amber-500 p-4 self-center shadow-xl m-r-4`}
             src={profilePicture}
             alt={"ValentinaPanic"}
             width={300}
             height={350}
-          /> */}
+          /> 
           <div className={`col-span-2 shadow-lg py-8 px-20 text-left text-zinc-700 text-lg dark:text-white border-r-[1px] border-amber-600 dark:border-slate-600 rounded-xl dark:bg-slate-800`}>
             <p className={`${pTagStyle}`}>
               I am a dedicated front-end engineer with a deep passion for

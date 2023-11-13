@@ -74,7 +74,7 @@ const Navbar: NextPage<{
           <CustomMobileLink href="/" title={"Home"} close={handleClick}/>
           <CustomMobileLink href="/contact-me" title={"Contact Me"} close={handleClick}/>
           <CustomMobileLink href="/about" title={"About"} close={handleClick}/>
-          <CustomMobileLink href="/pprojects" title={"Projects"} close={handleClick}/>
+          <CustomMobileLink href="/projects" title={"Projects"} close={handleClick}/>
         </motion.div>
       )}
     </header>
