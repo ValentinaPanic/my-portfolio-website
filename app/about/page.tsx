@@ -19,10 +19,10 @@ const About: NextPage = () => {
 
       <div className="grid w-full grid-cols-8 gap-5 items-center justify-center mb-10">
         <div
-          className={`col-span-8 flex flex-row gap-4 items-normal md:border-0 border-[1px] border-amber-600 dark:border-slate-600 rounded-xl md:p-0 p-8 dark:text-white shadow-inner dark:bg-slate-800`}
+          className={`col-span-8 sm:block flex flex-row gap-4 items-normal md:border-0 border-[1px] border-amber-600 dark:border-slate-600 rounded-xl md:p-0 p-8 dark:text-white shadow-inner dark:bg-slate-800`}
         >
            <Image
-            className={`relative rounded-2xl border-2 border-solid border-amber-500 p-4 self-center shadow-xl m-r-4`}
+            className={`relative rounded-full sm:m-auto border-2 border-solid border-amber-500 p-4 self-center shadow-xl m-r-4`}
             src={profilePicture}
             alt={"ValentinaPanic"}
             width={300}
