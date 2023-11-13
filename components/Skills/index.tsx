@@ -2,30 +2,30 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const skills = [
-  {
-    name: "SKILLS",
-    x: "0",
-    y: "0",
-  },
+  // {
+  //   name: "SKILLS",
+  //   x: "0",
+  //   y: "0",
+  // },
   {
     name: "Ruby on Rails",
-    x: "-15vw",
-    y: "19vw",
+    x: "-19vw",
+    y: "26vw",
   },
   {
     name: "ReactJS",
-    x: "-15vw",
-    y: "0",
+    x: "0vw",
+    y: "-10vw",
   },
   {
     name: "Javascript",
-    x: "10vw",
+    x: "0vw",
     y: "10vw",
   },
   {
     name: "Typescript",
-    x: "-29vw",
-    y: "4vw",
+    x: "20vw",
+    y: "-30vw",
   },
   {
     name: "Rest API",
@@ -34,48 +34,48 @@ const skills = [
   },
   {
     name: "CSS",
-    x: "-5vw",
-    y: "-10vw",
+    x: "-15vw",
+    y: "0",
   },
   {
     name: "Tailwind CSS",
-    x: "-22vw",
-    y: "-12vw",
+    x: "-28vw",
+    y: "8vw",
   },
   {
     name: "Styled Components",
-    x: "-10vw",
+    x: "29vw",
     y: "7vw",
   },
   {
     name: "Semantic React UI",
-    x: "27vw",
-    y: "-5vw",
+    x: "-17vw",
+    y: "-30vw",
   },
   {
     name: "Astro",
-    x: "12vw",
+    x: "19vw",
     y: "-10vw",
   },
   {
     name: "Contentful",
-    x: "5vw",
-    y: "15vw",
+    x: "19vw",
+    y: "27vw",
   },
   {
     name: "HTML",
-    x: "25vw",
-    y: "4vw",
+    x: "0vw",
+    y: "24vw",
   },
   {
     name: "Jest/Enzyme",
-    x: "15vw",
-    y: "-17vw",
+    x: "-20vw",
+    y: "-8vw",
   },
   {
     name: "Storybook",
     x: "0vw",
-    y: "-20vw",
+    y: "-25vw",
   },
   {
     name: "Jira",
@@ -87,7 +87,7 @@ const skills = [
 const Skill = ({ name = "", x="", y="" }) => {
   return (
     <motion.div
-      className="flex items-center justify-center rounded-full font-semibold px-6 py-3 bg-amber-500 dark:bg-amber-500 absolute text-zinc-700"
+      className="flex items-center justify-center rounded-full font-semibold px-6 py-3 bg-amber-500 dark:bg-amber-500 absolute text-zinc-700 md:px-3 md:py-1 lg:text-sm sm:text-sm sm:font-medium sm:bg-transparent sm:text-amber-700"
       initial={{ x: "0", y: "0" }}
       whileInView={{ x: x, y: y }}
       transition={{ duration: 2 }}
@@ -99,8 +99,9 @@ const Skill = ({ name = "", x="", y="" }) => {
 
 const Skills = () => {
   return (
-    <div className="grow">
-      <div className="h-full flex items-center justify-center bg-circuralLight dark:bg-circuralDark shadow-xl rounded-lg">
+    <div className="w-full">
+      <div className="lg:min-h-[calc(100vh_-290px)] lg:mt-4 h-full flex items-center justify-center bg-circuralLight dark:bg-circuralDark shadow-xl rounded-lg self-stretch md:bg-circuralLightMd sm:bg-circuralLightSm">
+        <div className="font-bold text-5xl text-sky-600 md:text-3xl sm:text-sm">Skills</div>
         {skills.map((skill, index) => (
           <Skill key={index} name={skill.name} x={skill.x} y={skill.y} />
         ))}
