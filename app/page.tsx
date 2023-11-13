@@ -18,7 +18,7 @@ export default function Home() {
           <p className="font-semibold md:text-sm text-md py-5 leading-8 text-zinc-700 dark:text-white">
             Dependable.
             <br />
-            Unwavering Preseverance.
+            Unwavering Perseverance.
             <br />
             Strong Commitment to Self-Improvement.
           </p>

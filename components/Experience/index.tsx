@@ -13,14 +13,14 @@ const List = ({
 }) => {
   const ref = useRef(null);
   return (
-    <li className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col justify-between">
+    <li className="my-8 first:mt-0 last:mb-0 md:w-[70%] w-[60%] mx-auto flex flex-col justify-between">
       <CircleIcon reference={ref} />
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="font-bold text-2xl">
+        <h3 className="font-bold md:text-xl text-2xl">
           {position}{" "}
           <a
             href={companyLink}
@@ -45,17 +45,17 @@ const Experience = () => {
   });
   return (
     <div className="my-[50px] dark:text-light">
-      <div className="font-bold w-full text-center text-7xl text-amber-600 mb-20">
+      <div className="font-bold w-full text-center md:text-5xl text-7xl text-amber-600 mb-20">
         Experience
       </div>
-      <div ref={ref} className="w-[75%] mx-auto relative mb-10">
+      <div ref={ref} className="md:w-full w-[75%] mx-auto relative mb-10">
         <motion.div
           style={{
             scaleY: scrollYProgress,
           }}
           className="absolute left-9 top-0 w-[4px] h-full bg-amber-600 origin-top"
         />
-        <ul className="w-full flex flex-col items-start justify-between ml-4">
+        <ul className="w-full flex flex-col items-start justify-between md:ml-1 ml-4">
           <List
             position="Software Engineer"
             company="StackHawk"
@@ -72,10 +72,10 @@ const Experience = () => {
           />
         </ul>
       </div>
-      <div className="font-bold w-full text-center text-7xl text-amber-600 my-20">
+      <div className="font-bold w-full text-center md:text-5xl text-7xl text-amber-600 my-20">
         Education
       </div>
-      <div ref={ref} className="w-[75%] mx-auto relative m-20">
+      <div ref={ref} className="md:w-full w-[75%] mx-auto relative mb-20">
         <motion.div
           style={{
             scaleY: scrollYProgress,

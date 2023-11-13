@@ -7,19 +7,19 @@ import Experience from "../../components/Experience";
 
 const About: NextPage = () => {
   const colSpan =
-    "col-span-4 flex flex-col items-start justify-start shadow-lg p-8 h-full text-zinc-700 text-[15px] dark:text-white border-r-[1px] border-amber-600 dark:border-slate-600 rounded-xl dark:bg-slate-800";
+    "md:col-span-8 col-span-4 flex flex-col items-start justify-start shadow-lg p-8 h-full text-zinc-700 text-[15px] dark:text-white border-r-[1px] border-amber-600 dark:border-slate-600 rounded-xl dark:bg-slate-800";
   const pTagStyle = "mb-2";
   
   return (
     <main className="w-full flex flex-col justify-center items-center">
-      <div className="mb-5 text-amber-500 text-2xl">
+      <div className="w-full sm:px-2 sm:text-xl mb-5 text-amber-500 text-2xl text-center font-semibold">
         &apos;It&apos;s not what you achieve, it&apos;s what you overcome.
         That&apos;s what defines your career.&apos; — Carlton Fisk
       </div>
 
       <div className="grid w-full grid-cols-8 gap-5 items-center justify-center mb-10">
         <div
-          className={`col-span-8 flex flex-row gap-4 items-normal border-[1px] border-amber-600 dark:border-slate-600 rounded-xl p-8 dark:text-white shadow-inner dark:bg-slate-800`}
+          className={`col-span-8 flex flex-row gap-4 items-normal md:border-0 border-[1px] border-amber-600 dark:border-slate-600 rounded-xl md:p-0 p-8 dark:text-white shadow-inner dark:bg-slate-800`}
         >
           {/* <Image
             className={`relative rounded-2xl border-2 border-solid border-amber-500 p-4 self-center shadow-xl m-r-4`}
@@ -28,7 +28,7 @@ const About: NextPage = () => {
             width={300}
             height={350}
           />  */}
-          <div className={`col-span-2 shadow-lg py-8 px-20 text-left text-zinc-700 text-lg dark:text-white border-r-[1px] border-amber-600 dark:border-slate-600 rounded-xl dark:bg-slate-800`}>
+          <div className={`shadow-lg py-8 md:px-5 px-20 text-left text-zinc-700 text-lg dark:text-white md:border-0 border-r-[1px] border-amber-600 dark:border-slate-600 rounded-xl dark:bg-slate-800`}>
             <p className={`${pTagStyle}`}>
               I am a dedicated front-end engineer with a deep passion for
               crafting user-friendly and visually pleasing interfaces. My

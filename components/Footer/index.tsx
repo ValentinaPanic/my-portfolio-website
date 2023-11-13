@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="flex items-center justify-center text-zinc-700 font-mono dark:text-amber-500">
         {new Date().getFullYear()} &copy; All Rights Reserved.
       </div>
-      <span className="flex items-center justify-center text-zinc-700 font-mono dark:text-amber-500">Build With <span className="text-2xl px-1">&#9825;</span>By Valentina Panic</span>
+      <span className="flex items-center justify-center text-zinc-700 font-mono dark:text-amber-500">Built With <span className="text-2xl px-1">&#9825;</span>By Valentina Panic</span>
     </footer>
   );
 };

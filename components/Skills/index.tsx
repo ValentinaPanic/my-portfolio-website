@@ -101,7 +101,7 @@ const Skills = () => {
   return (
     <div className="w-full">
       <div className="lg:min-h-[calc(100vh_-290px)] lg:mt-4 h-full flex items-center justify-center bg-circuralLight dark:bg-circuralDark shadow-xl rounded-lg self-stretch md:bg-circuralLightMd sm:bg-circuralLightSm">
-        <div className="font-bold text-5xl text-sky-600 md:text-3xl sm:text-sm">Skills</div>
+        <div className="font-bold text-5xl text-sky-600 md:text-3xl sm:text-sm z-10">Skills</div>
         {skills.map((skill, index) => (
           <Skill key={index} name={skill.name} x={skill.x} y={skill.y} />
         ))}
