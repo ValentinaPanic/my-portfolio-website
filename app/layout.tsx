@@ -23,9 +23,9 @@ export default function RootLayout({
       <body
         className={`${monsterrat.variable} font-mont relative bg-zinc-50 text-zinc-900 w-full h-full`}
       >
-        <Navbar darkMode={true} />
+     
         <div className="min-h-[calc(100vh_-_154px)] mx-3 mt-3 md:m-0">{children}</div>
-        <Footer />
+
       </body>
     </html>
   );
