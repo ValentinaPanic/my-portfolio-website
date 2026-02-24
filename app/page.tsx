@@ -224,7 +224,7 @@ export default function ModernPortfolio() {
                 Currently open to new opportunities!
               </p>
               <p className="text-gray-700 text-base">
-                I amm especially interested in roles focused on design systems, component libraries, or innovative 
+                I am especially interested in roles focused on design systems, component libraries, or innovative 
                 product teams that value AI-augmented development.
               </p>
             </div>
