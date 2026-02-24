@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { SetStateAction, useState } from 'react';
 import { Github, Linkedin, Mail, ExternalLink, Code2, Layers, Sparkles, Menu, X, ArrowRight, Download } from 'lucide-react';
 
 export default function ModernPortfolio() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
-  const scrollToSection = (section) => {
+  const scrollToSection = (section: string) => {
     setActiveSection(section);
     setMobileMenuOpen(false);
     
@@ -195,8 +195,8 @@ export default function ModernPortfolio() {
 
           <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
             <p>
-              I'm a <strong className="text-purple-600">Front End Engineer at StackHawk</strong>, where I build 
-              security tools that help developers ship safer code. Over the past 5 years, I've gone from career-changer 
+              I am a <strong className="text-purple-600">Front End Engineer at StackHawk</strong>, where I build 
+              security tools that help developers ship safer code. Over the past 5 years, I have gone from career-changer 
               to contributing to major platform initiatives—including building 20+ components for our design system 
               and shipping 360+ features.
             </p>
@@ -209,12 +209,12 @@ export default function ModernPortfolio() {
 
             <p>
               What I love most about frontend development is creating interfaces that feel <em>intuitive</em>. Whether 
-              it's building reusable components, implementing smooth animations, or solving complex layout challenges, 
-              I'm always focused on the end user experience.
+              it is building reusable components, implementing smooth animations, or solving complex layout challenges, 
+              I am always focused on the end user experience.
             </p>
 
             <p>
-              Recently, I've been exploring <strong className="text-indigo-600">AI-assisted development workflows</strong> using 
+              Recently, I have been exploring <strong className="text-indigo-600">AI-assisted development workflows</strong> using 
               Cursor and Claude. These tools have transformed how I approach code generation, refactoring, and testing—making 
               me more productive while maintaining code quality.
             </p>
@@ -224,7 +224,7 @@ export default function ModernPortfolio() {
                 Currently open to new opportunities!
               </p>
               <p className="text-gray-700 text-base">
-                I'm especially interested in roles focused on design systems, component libraries, or innovative 
+                I amm especially interested in roles focused on design systems, component libraries, or innovative 
                 product teams that value AI-augmented development.
               </p>
             </div>
@@ -410,12 +410,12 @@ export default function ModernPortfolio() {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Let's Connect</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Let`s Connect</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto mb-8"></div>
           
           <p className="text-xl text-gray-600 mb-12">
-            I'm currently exploring new opportunities in frontend engineering. Whether you want to discuss a role, 
-            collaborate on a project, or just chat about React and design systems, I'd love to hear from you!
+            I am currently exploring new opportunities in frontend engineering. Whether you want to discuss a role, 
+            collaborate on a project, or just chat about React and design systems, I would love to hear from you!
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
