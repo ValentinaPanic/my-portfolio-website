@@ -1,6 +1,7 @@
 "use client";
 
 import React, { SetStateAction, useState } from 'react';
+import Link from 'next/link';
 import { Github, Linkedin, Mail, ExternalLink, Code2, Layers, Sparkles, Menu, X, ArrowRight, Download } from 'lucide-react';
 
 export default function ModernPortfolio() {
@@ -29,8 +30,27 @@ export default function ModernPortfolio() {
             </div>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex gap-8">
-              {['home', 'about', 'work', 'skills', 'contact'].map((section) => (
+            <div className="hidden md:flex gap-8 items-center">
+              {['home', 'about', 'work'].map((section) => (
+                <button
+                  key={section}
+                  onClick={() => scrollToSection(section)}
+                  className={`capitalize transition-colors ${
+                    activeSection === section
+                      ? 'text-purple-600 font-semibold'
+                      : 'text-gray-600 hover:text-purple-600'
+                  }`}
+                >
+                  {section}
+                </button>
+              ))}
+              <Link
+                href="/projects"
+                className="capitalize text-gray-600 hover:text-purple-600 transition-colors"
+              >
+                projects
+              </Link>
+              {['skills', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -57,7 +77,23 @@ export default function ModernPortfolio() {
           {/* Mobile Menu */}
           {mobileMenuOpen && (
             <div className="md:hidden mt-4 pb-4 flex flex-col gap-4">
-              {['home', 'about', 'work', 'skills', 'contact'].map((section) => (
+              {['home', 'about', 'work'].map((section) => (
+                <button
+                  key={section}
+                  onClick={() => scrollToSection(section)}
+                  className="capitalize text-left py-2 text-gray-600 hover:text-purple-600"
+                >
+                  {section}
+                </button>
+              ))}
+              <Link
+                href="/projects"
+                onClick={() => setMobileMenuOpen(false)}
+                className="capitalize text-left py-2 text-gray-600 hover:text-purple-600"
+              >
+                projects
+              </Link>
+              {['skills', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -93,9 +129,16 @@ export default function ModernPortfolio() {
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4 mb-8">
+                <Link
+                  href="/projects"
+                  className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all"
+                >
+                  <Code2 size={20} />
+                  See My Projects
+                </Link>
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all"
+                  className="flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 hover:shadow-lg transition-all"
                 >
                   Get in touch
                   <ArrowRight size={20} />
@@ -113,7 +156,7 @@ export default function ModernPortfolio() {
               {/* Social Links */}
               <div className="flex gap-4">
                 <a
-                  href="https://github.com/valentina-panic"
+                  href="https://github.com/ValentinaPanic"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
@@ -122,7 +165,7 @@ export default function ModernPortfolio() {
                   <Github size={20} />
                 </a>
                 <a
-                  href="https://linkedin.com/in/valentina-panic"
+                  href="https://www.linkedin.com/in/valentinapanic/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
@@ -150,7 +193,6 @@ export default function ModernPortfolio() {
                   <div>
                     <div className="text-3xl font-bold text-gray-900">360+</div>
                     <div className="text-sm text-gray-600">Features Shipped</div>
-                    <div className="text-xs text-gray-500 mt-1">Over 3 years at StackHawk</div>
                   </div>
                 </div>
               </div>
@@ -163,7 +205,6 @@ export default function ModernPortfolio() {
                   <div>
                     <div className="text-3xl font-bold text-gray-900">20+</div>
                     <div className="text-sm text-gray-600">Components Built</div>
-                    <div className="text-xs text-gray-500 mt-1">Tweety Bird design system</div>
                   </div>
                 </div>
               </div>
@@ -260,11 +301,11 @@ export default function ModernPortfolio() {
                   <ul className="space-y-2 ml-4 text-gray-700">
                     <li className="flex items-start gap-2">
                       <span className="text-purple-600 mt-1">→</span>
-                      <span>Key contributor to UI modernization, migrating platform from Semantic UI to Tailwind CSS and building 20+ components for Tweety Bird design system</span>
+                      <span>Key contributor to full-application migration from Semantic UI to Tailwind CSS, establishing new styling patterns adopted by the engineering team</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-600 mt-1">→</span>
-                      <span>Built and documented reusable components in Storybook for design consistency</span>
+                      <span>Built 20+ reusable components for a custom design system with Storybook documentation, standardizing UI patterns and accelerating feature development</span>
                     </li>
                   </ul>
                 </div>
@@ -272,16 +313,41 @@ export default function ModernPortfolio() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
                     <span className="w-2 h-2 bg-indigo-600 rounded-full"></span>
-                    Feature Development
+                    Feature Delivery
                   </h4>
                   <ul className="space-y-2 ml-4 text-gray-700">
                     <li className="flex items-start gap-2">
                       <span className="text-indigo-600 mt-1">→</span>
-                      <span>Shipped 360+ features including Attack Surface Management, API Discovery, and GitHub integrations</span>
+                      <span>Shipped 360+ features and fixes including Attack Surface Management, API Discovery, GitHub integration flows, and application management interfaces</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-indigo-600 mt-1">→</span>
-                      <span>Built custom D3.js visualizations for security metrics</span>
+                      <span>Built custom D3.js data visualizations (donut charts, security metrics dashboards) used by enterprise customers for vulnerability reporting</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-indigo-600 mt-1">→</span>
+                      <span>Developed integration UIs connecting 6+ third-party tools (Snyk, Jira, Slack, Vanta, Azure DevOps, Bitbucket)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-indigo-600 mt-1">→</span>
+                      <span>Implemented responsive mobile-first designs across the entire platform</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                    <span className="w-2 h-2 bg-violet-600 rounded-full"></span>
+                    AI-Assisted Development
+                  </h4>
+                  <ul className="space-y-2 ml-4 text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-violet-600 mt-1">→</span>
+                      <span>Integrated Cursor and Claude into daily workflow for code generation, refactoring, test writing, and debugging</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-violet-600 mt-1">→</span>
+                      <span>Created custom Cursor rules and reusable prompts to enforce code quality standards</span>
                     </li>
                   </ul>
                 </div>
@@ -289,7 +355,7 @@ export default function ModernPortfolio() {
 
               <div className="mt-6 pt-6 border-t border-gray-200">
                 <div className="flex flex-wrap gap-2">
-                  {['React 18', 'TypeScript', 'Tailwind CSS', 'Storybook', 'D3.js', 'Nanostores'].map((tech) => (
+                  {['React', 'TypeScript', 'Tailwind CSS', 'Storybook', 'D3.js', 'Nanostores'].map((tech) => (
                     <span key={tech} className="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium">
                       {tech}
                     </span>
@@ -311,11 +377,11 @@ export default function ModernPortfolio() {
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="text-gray-400 mt-1">→</span>
-                  <span>Developed UI features using React, TypeScript, and Semantic UI</span>
+                  <span>Developed UI features using React, TypeScript, and Semantic UI for an application security platform serving developer teams</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-gray-400 mt-1">→</span>
-                  <span>Collaborated on code reviews and learned component architecture best practices</span>
+                  <span>Participated in code reviews, sprint planning, and architectural discussions, ramping to independent feature delivery within 6 months</span>
                 </li>
               </ul>
             </div>
@@ -336,7 +402,7 @@ export default function ModernPortfolio() {
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Frontend Development</h3>
               <div className="flex flex-wrap gap-2">
-                {['JavaScript', 'TypeScript', 'React 18', 'HTML/CSS', 'Tailwind CSS', 'D3.js'].map((skill) => (
+                {['JavaScript', 'TypeScript', 'React', 'HTML/CSS', 'Tailwind CSS', 'D3.js'].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
                     {skill}
                   </span>
@@ -429,7 +495,7 @@ export default function ModernPortfolio() {
             </a>
 
             <a
-              href="https://linkedin.com/in/valentina-panic"
+              href="https://www.linkedin.com/in/valentinapanic/"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-6 border-2 border-purple-200 rounded-xl hover:border-purple-400 hover:shadow-lg transition-all"
@@ -440,7 +506,7 @@ export default function ModernPortfolio() {
             </a>
 
             <a
-              href="https://github.com/valentina-panic"
+              href="https://github.com/ValentinaPanic"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-6 border-2 border-purple-200 rounded-xl hover:border-purple-400 hover:shadow-lg transition-all"
@@ -452,7 +518,7 @@ export default function ModernPortfolio() {
           </div>
 
           <div className="text-sm text-gray-500">
-            📍 Greenwood Village, Colorado | 🌍 Open to remote opportunities | 🗣️ English & Serbian (fluent)
+            📍 Denver, CO | 🌍 Open to remote opportunities | 🗣️ English & Serbian (fluent)
           </div>
         </div>
       </section>
