@@ -38,7 +38,7 @@ export default function ProjectsPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(320px,1fr))]">
             {projects.map((project) => (
               <article
                 key={project.name}
