@@ -2,7 +2,7 @@
 
 import React, { SetStateAction, useState } from 'react';
 import Link from 'next/link';
-import { Github, Linkedin, Mail, ExternalLink, Code2, Layers, Sparkles, Menu, X, ArrowRight, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Code2, Layers, Sparkles, Menu, X, ArrowRight, Download, TrendingUp } from 'lucide-react';
 
 export default function ModernPortfolio() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -123,22 +123,21 @@ export default function ModernPortfolio() {
                 Front End Engineer
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Building intuitive interfaces for cybersecurity tools. Specialist in component architecture, 
-                design systems, and modern AI-assisted development workflows.
+                Frontend engineer with 5 years of production React and TypeScript experience in cybersecurity SaaS. Strong in component architecture, design systems, and daily AI-assisted development.
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-wrap gap-4 mb-8">
+              <div className="flex flex-col md:flex-row md:flex-wrap gap-4 mb-8">
                 <Link
                   href="/projects"
-                  className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all"
+                  className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all"
                 >
                   <Code2 size={20} />
-                  See My Projects
+                  Projects
                 </Link>
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 hover:shadow-lg transition-all"
+                  className="flex items-center justify-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 hover:shadow-lg transition-all"
                 >
                   Get in touch
                   <ArrowRight size={20} />
@@ -146,10 +145,10 @@ export default function ModernPortfolio() {
                 <a
                   href="/valentina-panic-resume.pdf"
                   download="Valentina_Panic_Resume.pdf"
-                  className="flex items-center gap-2 px-6 py-3 border-2 border-purple-300 text-purple-700 rounded-lg hover:bg-purple-50 transition-colors"
+                  className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-purple-300 text-purple-700 rounded-lg hover:bg-purple-50 transition-colors"
                 >
                   <Download size={20} />
-                  Download Resume
+                  Resume
                 </a>
               </div>
 
@@ -188,11 +187,11 @@ export default function ModernPortfolio() {
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-purple-100 rounded-lg">
-                    <Code2 className="w-6 h-6 text-purple-600" />
+                    <TrendingUp className="w-6 h-6 text-purple-600" />
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-gray-900">360+</div>
-                    <div className="text-sm text-gray-600">Features Shipped</div>
+                    <div className="text-3xl font-bold text-gray-900">3x</div>
+                    <div className="text-sm text-gray-600">Increase in weekly engagement on a redesigned dashboard</div>
                   </div>
                 </div>
               </div>
@@ -204,7 +203,7 @@ export default function ModernPortfolio() {
                   </div>
                   <div>
                     <div className="text-3xl font-bold text-gray-900">20+</div>
-                    <div className="text-sm text-gray-600">Components Built</div>
+                    <div className="text-sm text-gray-600">Components built for an internal design system</div>
                   </div>
                 </div>
               </div>
@@ -212,12 +211,23 @@ export default function ModernPortfolio() {
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-purple-100 rounded-lg">
-                    <Sparkles className="w-6 h-6 text-purple-600" />
+                    <Code2 className="w-6 h-6 text-purple-600" />
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-gray-900">AI-First</div>
-                    <div className="text-sm text-gray-600">Development Workflow</div>
-                    <div className="text-xs text-gray-500 mt-1">Daily Cursor & Claude user</div>
+                    <div className="text-3xl font-bold text-gray-900">360+</div>
+                    <div className="text-sm text-gray-600">Features shipped over 5 years</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-indigo-100 rounded-lg">
+                    <Sparkles className="w-6 h-6 text-indigo-600" />
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-gray-900">Daily</div>
+                    <div className="text-sm text-gray-600">Cursor + Claude workflow</div>
                   </div>
                 </div>
               </div>
@@ -236,45 +246,26 @@ export default function ModernPortfolio() {
 
           <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
             <p>
-              I am a <strong className="text-purple-600">Front End Engineer at StackHawk</strong>, where I build 
-              security tools that help developers ship safer code. Over the past 5 years, I have gone from career-changer 
-              to contributing to major platform initiatives—including building 20+ components for our design system 
-              and shipping 360+ features.
+              I am a frontend engineer with 5 years of production React and TypeScript experience in cybersecurity SaaS. I am drawn to the kind of work where the frontend matters — complex data, technical users, interfaces that have to be both fast and clear.
             </p>
 
             <p>
-              Before tech, I spent 7 years in <strong>hospitality management</strong>, running a 100-seat restaurant 
-              with a team of 20. That experience taught me the value of clear communication, staying calm under pressure, 
-              and putting users (or guests) first—skills that translate surprisingly well to frontend engineering.
+              Things I have spent the most time on: building design systems and reusable component libraries, leading user-facing initiatives end-to-end, and contributing to platform-level work like migrations and architecture decisions.
             </p>
 
             <p>
-              What I love most about frontend development is creating interfaces that feel <em>intuitive</em>. Whether 
-              it is building reusable components, implementing smooth animations, or solving complex layout challenges, 
-              I am always focused on the end user experience.
+              Lately I use Cursor and Claude every day. I wrote custom rules for both that my engineering team adopted across the codebase, and I built a side project called PrepCode using the Anthropic API to practice AI-powered product features outside of work.
             </p>
 
             <p>
-              Recently, I have been exploring <strong className="text-indigo-600">AI-assisted development workflows</strong> using 
-              Cursor and Claude. These tools have transformed how I approach code generation, refactoring, and testing—making 
-              me more productive while maintaining code quality.
+              Currently open to new opportunities — looking for senior frontend roles at SaaS or developer tools companies, remote-first.
             </p>
-
-            <div className="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-r-lg">
-              <p className="font-semibold text-gray-900 mb-2">
-                Currently open to new opportunities!
-              </p>
-              <p className="text-gray-700 text-base">
-                I am especially interested in roles focused on design systems, component libraries, or innovative 
-                product teams that value AI-augmented development.
-              </p>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Work Experience Section */}
-      <section id="work" className="py-20 px-6">
+      <section id="work" className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Work Experience</h2>
@@ -289,23 +280,27 @@ export default function ModernPortfolio() {
                   <h3 className="text-2xl font-bold text-gray-900">Front End Engineer</h3>
                   <div className="text-lg text-purple-600 font-medium">StackHawk</div>
                 </div>
-                <div className="text-sm text-gray-500 mt-2 md:mt-0">Aug 2022 - Present</div>
+                <div className="text-sm text-gray-500 mt-2 md:mt-0">Aug 2022 - May 2026</div>
               </div>
 
               <div className="space-y-6">
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
                     <span className="w-2 h-2 bg-purple-600 rounded-full"></span>
-                    UI Modernization & Architecture
+                    Platform Modernization
                   </h4>
                   <ul className="space-y-2 ml-4 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-purple-600 mt-1">→</span>
-                      <span>Key contributor to full-application migration from Semantic UI to Tailwind CSS, establishing new styling patterns adopted by the engineering team</span>
+                      <span className="text-purple-600 flex items-center h-6 shrink-0">→</span>
+                      <span>Main contributor on the full-application migration from Semantic UI to Tailwind CSS (working alongside the engineer leading the effort)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-purple-600 mt-1">→</span>
-                      <span>Built 20+ reusable components for a custom design system with Storybook documentation, standardizing UI patterns and accelerating feature development</span>
+                      <span className="text-purple-600 flex items-center h-6 shrink-0">→</span>
+                      <span>Migrated state management from Redux to Nanostores across feature areas</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 flex items-center h-6 shrink-0">→</span>
+                      <span>Contributed to React 19 upgrade, resolving breaking changes across consuming components</span>
                     </li>
                   </ul>
                 </div>
@@ -313,24 +308,20 @@ export default function ModernPortfolio() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
                     <span className="w-2 h-2 bg-indigo-600 rounded-full"></span>
-                    Feature Delivery
+                    Product Ownership & Design System
                   </h4>
                   <ul className="space-y-2 ml-4 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 mt-1">→</span>
-                      <span>Shipped 360+ features and fixes including Attack Surface Management, API Discovery, GitHub integration flows, and application management interfaces</span>
+                      <span className="text-indigo-600 flex items-center h-6 shrink-0">→</span>
+                      <span>Led the Daily Active Users initiative — redesigned a low-engagement Getting Started page into a dashboard with &ldquo;Things to Do Today,&rdquo; Top 5 Vulnerabilities, and Achievements sections. Weekly visit rate rose from ~10% to ~32% after launch</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 mt-1">→</span>
-                      <span>Built custom D3.js data visualizations (donut charts, security metrics dashboards) used by enterprise customers for vulnerability reporting</span>
+                      <span className="text-indigo-600 flex items-center h-6 shrink-0">→</span>
+                      <span>Built 20+ reusable components for an internal design system with Storybook documentation</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 mt-1">→</span>
-                      <span>Developed integration UIs connecting 6+ third-party tools (Snyk, Jira, Slack, Vanta, Azure DevOps, Bitbucket)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 mt-1">→</span>
-                      <span>Implemented responsive mobile-first designs across the entire platform</span>
+                      <span className="text-indigo-600 flex items-center h-6 shrink-0">→</span>
+                      <span>Drove component adoption through code review and pairing with engineers across the team</span>
                     </li>
                   </ul>
                 </div>
@@ -338,16 +329,41 @@ export default function ModernPortfolio() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
                     <span className="w-2 h-2 bg-violet-600 rounded-full"></span>
+                    Feature Delivery & Cross-Stack Work
+                  </h4>
+                  <ul className="space-y-2 ml-4 text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-violet-600 flex items-center h-6 shrink-0">→</span>
+                      <span>Shipped 360+ features and fixes including Attack Surface Management, API Discovery, GitHub integration flows, and application management interfaces</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-violet-600 flex items-center h-6 shrink-0">→</span>
+                      <span>Occasionally contributed to backend tickets (protobuf schema updates, API contract changes in Kotlin services) using AI tooling to navigate code outside primary expertise</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-violet-600 flex items-center h-6 shrink-0">→</span>
+                      <span>Built custom D3.js data visualization (security metrics donut chart) used by enterprise customers</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-violet-600 flex items-center h-6 shrink-0">→</span>
+                      <span>Developed integration UIs connecting 6+ third-party tools (Snyk, Jira, Slack, Vanta, Azure DevOps, Bitbucket)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                    <span className="w-2 h-2 bg-fuchsia-600 rounded-full"></span>
                     AI-Assisted Development
                   </h4>
                   <ul className="space-y-2 ml-4 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-violet-600 mt-1">→</span>
-                      <span>Integrated Cursor and Claude into daily workflow for code generation, refactoring, test writing, and debugging</span>
+                      <span className="text-fuchsia-600 flex items-center h-6 shrink-0">→</span>
+                      <span>Integrated Cursor and Claude into daily workflow for code generation, refactoring, testing, and navigating unfamiliar services</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-violet-600 mt-1">→</span>
-                      <span>Created custom Cursor rules and reusable prompts to enforce code quality standards</span>
+                      <span className="text-fuchsia-600 flex items-center h-6 shrink-0">→</span>
+                      <span>Authored custom Cursor and Claude rules adopted by the engineering team</span>
                     </li>
                   </ul>
                 </div>
@@ -376,12 +392,12 @@ export default function ModernPortfolio() {
 
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-1">→</span>
-                  <span>Developed UI features using React, TypeScript, and Semantic UI for an application security platform serving developer teams</span>
+                  <span className="text-gray-400 flex items-center h-6 shrink-0">→</span>
+                  <span>Shipped UI features in React, TypeScript, and Semantic UI for an application security platform</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-gray-400 mt-1">→</span>
-                  <span>Participated in code reviews, sprint planning, and architectural discussions, ramping to independent feature delivery within 6 months</span>
+                  <span className="text-gray-400 flex items-center h-6 shrink-0">→</span>
+                  <span>Ramped to independent feature delivery within 6 months</span>
                 </li>
               </ul>
             </div>
@@ -398,11 +414,11 @@ export default function ModernPortfolio() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Frontend Development */}
+            {/* Frontend */}
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Frontend Development</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-4">Frontend</h3>
               <div className="flex flex-wrap gap-2">
-                {['JavaScript', 'TypeScript', 'React', 'HTML/CSS', 'Tailwind CSS', 'D3.js'].map((skill) => (
+                {['JavaScript', 'TypeScript', 'React', 'HTML/CSS', 'Tailwind CSS', 'D3.js', 'Storybook', 'Vite', 'Webpack'].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
                     {skill}
                   </span>
@@ -410,11 +426,11 @@ export default function ModernPortfolio() {
               </div>
             </div>
 
-            {/* Tools & Workflow */}
+            {/* State & Architecture */}
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Tools & Workflow</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-4">State & Architecture</h3>
               <div className="flex flex-wrap gap-2">
-                {['Git/GitHub', 'Storybook', 'Figma', 'Jira', 'CI/CD', 'Jest'].map((skill) => (
+                {['Nanostores', 'Redux', 'React Context', 'Component architecture', 'Design systems'].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">
                     {skill}
                   </span>
@@ -422,11 +438,11 @@ export default function ModernPortfolio() {
               </div>
             </div>
 
-            {/* Modern Practices */}
+            {/* Testing & Quality */}
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Modern Practices</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-4">Testing & Quality</h3>
               <div className="flex flex-wrap gap-2">
-                {['Component Architecture', 'Design Systems', 'AI-Assisted Dev', 'Responsive Design', 'Agile/Scrum'].map((skill) => (
+                {['Jest', 'Playwright', 'Code review', 'Accessibility (WCAG)', 'Responsive design'].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
                     {skill}
                   </span>
@@ -434,11 +450,11 @@ export default function ModernPortfolio() {
               </div>
             </div>
 
-            {/* AI Development Tools */}
+            {/* Cross-Stack */}
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">AI Development Tools</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-4">Cross-Stack</h3>
               <div className="flex flex-wrap gap-2">
-                {['Cursor (Daily)', 'Claude (Daily)', 'Custom Workflows', 'Code Generation'].map((skill) => (
+                {['REST APIs', 'protobuf / gRPC', 'API contracts'].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-violet-100 text-violet-700 rounded-full text-sm font-medium">
                     {skill}
                   </span>
@@ -446,11 +462,11 @@ export default function ModernPortfolio() {
               </div>
             </div>
 
-            {/* State Management */}
+            {/* AI Development */}
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">State Management</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-4">AI Development</h3>
               <div className="flex flex-wrap gap-2">
-                {['Nanostores', 'Redux', 'React Context', 'Local Storage'].map((skill) => (
+                {['Cursor (daily)', 'Claude (daily)', 'Anthropic API', 'Custom rules & workflows'].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm font-medium">
                     {skill}
                   </span>
@@ -458,11 +474,11 @@ export default function ModernPortfolio() {
               </div>
             </div>
 
-            {/* Additional */}
+            {/* Tools */}
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Additional</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-4">Tools</h3>
               <div className="flex flex-wrap gap-2">
-                {['Ruby on Rails', 'REST APIs', 'Recharts', 'Semantic UI'].map((skill) => (
+                {['Git / GitHub', 'CI/CD', 'Figma', 'Jira', 'Agile / Scrum'].map((skill) => (
                   <span key={skill} className="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium">
                     {skill}
                   </span>
