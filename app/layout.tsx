@@ -8,7 +8,8 @@ const monsterrat = Montserrat({
 
 export const metadata = {
   title: "Valentina Panic | Personal Portfolio",
-  description: "Valentina Panic is a software engineer",
+  description:
+    "Senior frontend engineer specializing in React, TypeScript, and design systems. Building @crestline/ui and open to new opportunities.",
 };
 
 export default function RootLayout({

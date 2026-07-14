@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, Package } from "lucide-react";
 import { projects } from "../../data/projects";
 
 export default function ProjectsPage() {
@@ -75,6 +75,17 @@ export default function ProjectsPage() {
                     >
                       <ExternalLink size={16} />
                       Live
+                    </a>
+                  )}
+                  {project.npmUrl && (
+                    <a
+                      href={project.npmUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 border-2 border-purple-300 text-purple-700 rounded-lg hover:bg-purple-50 transition-colors text-sm"
+                    >
+                      <Package size={16} />
+                      npm
                     </a>
                   )}
                   {project.repoUrl && (

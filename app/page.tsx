@@ -69,14 +69,17 @@ export default function ModernPortfolio() {
             <button
               className="md:hidden text-gray-600"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu"
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {mobileMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
             </button>
           </div>
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 flex flex-col gap-4">
+            <div id="mobile-menu" className="md:hidden mt-4 pb-4 flex flex-col gap-4">
               {['home', 'about', 'work'].map((section) => (
                 <button
                   key={section}
@@ -123,7 +126,7 @@ export default function ModernPortfolio() {
                 Front End Engineer
               </h2>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Frontend engineer with 5 years of production React and TypeScript experience in cybersecurity SaaS. Strong in component architecture, design systems, and daily AI-assisted development.
+                Frontend engineer with 5 years of production React and TypeScript experience in cybersecurity SaaS. Strong in component architecture, design systems (including an open-source library I publish and maintain), and daily AI-assisted development.
               </p>
 
               {/* CTA Buttons */}
@@ -254,7 +257,7 @@ export default function ModernPortfolio() {
             </p>
 
             <p>
-              Lately I use Cursor and Claude every day. I wrote custom rules for both that my engineering team adopted across the codebase, and I built a side project called PrepCode using the Anthropic API to practice AI-powered product features outside of work.
+              Lately I use Cursor and Claude every day. I wrote custom rules for both that my engineering team adopted across the codebase, and I built a side project called PrepCode using the Anthropic API to practice AI-powered product features outside of work. I also published @crestline/ui, a small React component library, after building the token system, build pipeline, and npm publish workflow myself.
             </p>
 
             <p>
@@ -291,15 +294,15 @@ export default function ModernPortfolio() {
                   </h4>
                   <ul className="space-y-2 ml-4 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-purple-600 flex items-center h-6 shrink-0">→</span>
+                      <span className="text-purple-600 flex items-center h-6 shrink-0" aria-hidden="true">→</span>
                       <span>Main contributor on the full-application migration from Semantic UI to Tailwind CSS (working alongside the engineer leading the effort)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-purple-600 flex items-center h-6 shrink-0">→</span>
+                      <span className="text-purple-600 flex items-center h-6 shrink-0" aria-hidden="true">→</span>
                       <span>Migrated state management from Redux to Nanostores across feature areas</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-purple-600 flex items-center h-6 shrink-0">→</span>
+                      <span className="text-purple-600 flex items-center h-6 shrink-0" aria-hidden="true">→</span>
                       <span>Contributed to React 19 upgrade, resolving breaking changes across consuming components</span>
                     </li>
                   </ul>
@@ -312,15 +315,15 @@ export default function ModernPortfolio() {
                   </h4>
                   <ul className="space-y-2 ml-4 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 flex items-center h-6 shrink-0">→</span>
+                      <span className="text-indigo-600 flex items-center h-6 shrink-0" aria-hidden="true">→</span>
                       <span>Led the Daily Active Users initiative — redesigned a low-engagement Getting Started page into a dashboard with &ldquo;Things to Do Today,&rdquo; Top 5 Vulnerabilities, and Achievements sections. Weekly visit rate rose from ~10% to ~32% after launch</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 flex items-center h-6 shrink-0">→</span>
+                      <span className="text-indigo-600 flex items-center h-6 shrink-0" aria-hidden="true">→</span>
                       <span>Built 20+ reusable components for an internal design system with Storybook documentation</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-indigo-600 flex items-center h-6 shrink-0">→</span>
+                      <span className="text-indigo-600 flex items-center h-6 shrink-0" aria-hidden="true">→</span>
                       <span>Drove component adoption through code review and pairing with engineers across the team</span>
                     </li>
                   </ul>
@@ -333,19 +336,19 @@ export default function ModernPortfolio() {
                   </h4>
                   <ul className="space-y-2 ml-4 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-violet-600 flex items-center h-6 shrink-0">→</span>
+                      <span className="text-violet-600 flex items-center h-6 shrink-0" aria-hidden="true">→</span>
                       <span>Shipped 360+ features and fixes including Attack Surface Management, API Discovery, GitHub integration flows, and application management interfaces</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-violet-600 flex items-center h-6 shrink-0">→</span>
+                      <span className="text-violet-600 flex items-center h-6 shrink-0" aria-hidden="true">→</span>
                       <span>Occasionally contributed to backend tickets (protobuf schema updates, API contract changes in Kotlin services) using AI tooling to navigate code outside primary expertise</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-violet-600 flex items-center h-6 shrink-0">→</span>
+                      <span className="text-violet-600 flex items-center h-6 shrink-0" aria-hidden="true">→</span>
                       <span>Built custom D3.js data visualization (security metrics donut chart) used by enterprise customers</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-violet-600 flex items-center h-6 shrink-0">→</span>
+                      <span className="text-violet-600 flex items-center h-6 shrink-0" aria-hidden="true">→</span>
                       <span>Developed integration UIs connecting 6+ third-party tools (Snyk, Jira, Slack, Vanta, Azure DevOps, Bitbucket)</span>
                     </li>
                   </ul>
@@ -358,11 +361,11 @@ export default function ModernPortfolio() {
                   </h4>
                   <ul className="space-y-2 ml-4 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-fuchsia-600 flex items-center h-6 shrink-0">→</span>
+                      <span className="text-fuchsia-600 flex items-center h-6 shrink-0" aria-hidden="true">→</span>
                       <span>Integrated Cursor and Claude into daily workflow for code generation, refactoring, testing, and navigating unfamiliar services</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-fuchsia-600 flex items-center h-6 shrink-0">→</span>
+                      <span className="text-fuchsia-600 flex items-center h-6 shrink-0" aria-hidden="true">→</span>
                       <span>Authored custom Cursor and Claude rules adopted by the engineering team</span>
                     </li>
                   </ul>
@@ -392,11 +395,11 @@ export default function ModernPortfolio() {
 
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
-                  <span className="text-gray-400 flex items-center h-6 shrink-0">→</span>
+                  <span className="text-gray-500 flex items-center h-6 shrink-0" aria-hidden="true">→</span>
                   <span>Shipped UI features in React, TypeScript, and Semantic UI for an application security platform</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-gray-400 flex items-center h-6 shrink-0">→</span>
+                  <span className="text-gray-500 flex items-center h-6 shrink-0" aria-hidden="true">→</span>
                   <span>Ramped to independent feature delivery within 6 months</span>
                 </li>
               </ul>
