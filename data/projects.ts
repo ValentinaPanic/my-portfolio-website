@@ -17,15 +17,15 @@ export const projects: Project[] = [
     liveUrl: "https://crestline-storybook.vercel.app",
     npmUrl: "https://www.npmjs.com/package/@crestline/ui",
     repoUrl: "https://github.com/ValentinaPanic/crestline",
-    tech: ["React", "TypeScript", "CSS Modules", "tsup", "Storybook"],
+    tech: ["React", "TypeScript", "CSS Modules", "tsup", "Storybook", "GitHub Actions"],
   },
   {
     name: "PrepCode",
     tagline: "Interview prep app for frontend engineers",
     description:
-      "Interview prep app for frontend engineers — built after going through senior frontend interview loops and noticing specific gaps in API contract design, pagination patterns, and system design reasoning. The goal was a tool I would actually use, focused on parts of frontend interviews that traditional platforms don't cover.\n\nBuilt with React, TypeScript, Tailwind CSS, and the Anthropic API for AI-powered feedback. Currently client-side; planning to move the Anthropic calls server-side and add authentication and persisted session history.",
+      "I built PrepCode after going through senior frontend interview loops and noticing specific gaps in API contract design, pagination patterns, and system design reasoning. The goal was a tool I would actually use, focused on the parts of frontend interviews that traditional platforms don't cover.\n\nFull-stack: a React, Vite, and TypeScript frontend on Vercel, a Node.js/Express API on Render, and Supabase (Postgres), with Claude responses streamed over Server-Sent Events. I built the backend with Claude, and I'm working through a Node.js course to understand the framework underneath it.",
     liveUrl: "https://prep-code.vercel.app",
     repoUrl: "https://github.com/ValentinaPanic/PrepCode",
-    tech: ["React", "TypeScript", "Tailwind CSS", "Anthropic API"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Supabase", "PostgreSQL", "Anthropic API"],
   },
 ];

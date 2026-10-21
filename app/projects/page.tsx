@@ -33,8 +33,8 @@ export default function ProjectsPage() {
             </h1>
             <div className="w-20 h-1 bg-gradient-to-r from-purple-600 to-indigo-600 mx-auto mb-4"></div>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              A collection of things I have built — exploring AI-augmented
-              workflows, design systems, and modern frontend architecture.
+              A collection of things I have built: AI-assisted workflows, design
+              systems, and modern frontend architecture.
             </p>
           </div>
 
